@@ -1,0 +1,47 @@
+#screen 858 600
+screen 1544 1080
+#camera -0 2 4  0.55 y 0 x -20
+#camera 6.4199 2.01511 1.12227  0.2  y 39.2 x -8.10002
+
+#San Miguel
+camera 13.5 2.0 12.0 0.8 -2.0 10.0
+
+#Bistro
+#camera -2.5 0.45 0.2 0.8 -85.0 20.0
+
+#Sponza
+#camera 11.202 3.410 -0.039 0.8 92.3 2.7
+
+
+#brdf 0.7 0.7 0.7   0.04 0.04 0.04   10
+#box -2 -0.01 -2   4 0.01 4
+#brdf 0.900000 0.400000 0.900000 0.000000 0.000000 0.000000 2000
+#sphere -0.000000 0.400000 -0.500000 0.4
+#brdf 0.15 0.1 0.05  0.7 0.55 0.3 80
+#mesh dwarf.x  1.00000 0.00000 0.50000 0.01 
+#brdf 0.8 0.8 0.75 0.15 0.15 0.15 30
+#mesh bunny.ply  -1.00000 -0.170000 0.500 5.0
+
+ibl 0.0 1.0
+
+#meshv2 models/lion_head/lion_head_1k.obj 1.0000 0.000000 0.50000 2.0 
+#meshv2 models/marble_bust/marble_bust_01_1k.obj -1.0000 0.000000 0.50000 2.0
+#meshv2 models/carved_wooden_elephant_1k/carved_wooden_elephant_1k.obj 0.0000 0.000000 -0.50000 7.5
+
+#meshv2 models/lion_head_1k.gltf/lion_head_1k.gltf 1.0000 0.000000 0.50000 2.0 
+#meshv2 models/marble_bust_01_1k.gltf/marble_bust_01_1k.gltf -1.0000 0.000000 0.50000 2.0
+#meshv2 models/vintage_grandfather_clock_01_1k.gltf/vintage_grandfather_clock_01_1k.gltf 0.0000 0.000000 -0.00000 1.0
+
+
+meshv2 San_Miguel/San_Miguel.gltf 0.0000 0.000000 0.00000 1.0
+
+#meshv2 models/Bistro/Exterior/Exterior.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/Bistro/Exterior/Exterior_with_emissive_glass.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/Bistro/Interior/Interior.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/Bistro/Full/Full.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/sponza_v2/base/base.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/sponza_v2/curtains/curtains.gltf 0.0000 0.000000 0.00000 1.0
+#meshv2 models/sponza_v2/ivy/ivy.gltf 0.0000 0.000000 0.00000 1.0
+
+
+#meshv2 models/sponza/sponza.obj 0.0000 0.000000 0.00000 0.05
