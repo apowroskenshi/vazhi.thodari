@@ -50,3 +50,6 @@ assets/hdri/
 # Render output
 outputs/
 movie_frames/
+
+# Intel Open Image Denoise binaries
+utils/oidn/
