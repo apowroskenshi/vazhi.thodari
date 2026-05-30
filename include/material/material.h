@@ -14,9 +14,9 @@ struct Material {
     float ior = 1.5f;           // Index of refraction
     float roughness = 0.5f;     // GGX roughness [0=mirror, 1=diffuse]
     float metalness = 0.0f;     // 0=dielectric, 1=metal
-    bool thin_shell = false;    // Thin-shell transmission
-    bool emissive = false;      // If true, Kd is emission radiance
-    bool skip_geometry = false;  // If true, loader skips geometry for this material
+    bool thin_shell = false;      // Thin-shell transmission
+    bool emissive = false;        // If true, Kd is emission radiance
+    bool skip_geometry = false;   // If true, loader skips geometry for this material
 
     // Texture maps (shared — multiple materials may reference the same texture)
     std::shared_ptr<Texture> tex;              // map_Kd — diffuse color

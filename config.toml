@@ -4,10 +4,11 @@
 # ─── Scene Setup (read once at startup) ──────────────────────────
 
 [scene]
-width = 1544
-height = 1080
+width = 2560
+height = 1792
 
 # IBL environment maps (loaded at startup, switchable via ibl.map_index)
+
 [[scene.ibl_maps]]
 path = "kloofendal_48d_partly_cloudy_puresky_4k.hdr"
 name = "Cloud Noon"
@@ -15,6 +16,10 @@ name = "Cloud Noon"
 [[scene.ibl_maps]]
 path = "noon_grass_4k.hdr"
 name = "Afternoon"
+
+[[scene.ibl_maps]]
+path = "dikhololo_night_4k.hdr"
+name = "Night"
 
 [[scene.ibl_maps]]
 path = "umhlanga_sunrise_4k.hdr"
@@ -55,22 +60,28 @@ emission = [1.0, 1.0, 1.0]
 # ─── Scene Geometry ──────────────────────────────────────────────
 
 # Meshes: loaded via Assimp with their own materials
+#[[mesh]]
+#path = "Sponza/base/base.gltf"
+#position = [0.0, 0.0, 0.0]
+
+#[[mesh]]
+#path = "Sponza/ivy/ivy.gltf"
+#position = [0.0, 0.0, 0.0]
+
+#[[mesh]]
+#path = "Sponza/curtains/curtains.gltf"
+#position = [0.0, 0.0, 0.0]
+
 [[mesh]]
-path = "San_Miguel/San_Miguel.gltf"
+path = "Bistro/Exterior/Exterior.gltf"
 position = [0.0, 0.0, 0.0]
-scale = 1.0
+scale = 0.016
+
+#[[mesh]]
+#path = "San_Miguel/San_Miguel.gltf"
+#position = [0.0, 0.0, 0.0]
+#scale = 1.0
 # yaw = 0.0                   # optional, degrees
-
-# Uncomment to load other scenes:
-# [[mesh]]
-# path = "Bistro/Interior/Interior.gltf"
-# position = [0.0, 0.0, 0.0]
-# scale = 1.0
-
-# [[mesh]]
-# path = "sponza_v2/base/base.gltf"
-# position = [0.0, 0.0, 0.0]
-# scale = 1.0
 
 # Primitives (reference named materials)
 # [[sphere]]
@@ -87,17 +98,17 @@ scale = 1.0
 
 [camera]
 ry = 0.8
-yaw = -45.0
-pitch = 10.0
+yaw = 65.0
+pitch = -8.0
 
 [camera.position]
-x = 8.5
-y = 2.0
-z = 7.0
+x = 0.22
+y = 0.064
+z = 0.125
 
 [ibl]
 map_index = 0
-rotation = 0.0       # degrees
+rotation = -100.0       # degrees
 intensity = 1.0
 
 [area_light]
