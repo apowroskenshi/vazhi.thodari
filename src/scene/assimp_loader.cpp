@@ -7,6 +7,7 @@
 #include <assimp/postprocess.h>
 #include <assimp/version.h>
 #include <assimp/pbrmaterial.h>
+#include <assimp/GltfMaterial.h>
 #include <assimp/ProgressHandler.hpp>
 
 #include <fstream>
@@ -88,7 +89,15 @@ Material* extractGltfMaterial(const aiMaterial* mtl, const std::string& model_pa
     mtl->Get(AI_MATKEY_REFRACTI, ior);
 
     float f0 = std::pow((ior - 1.0f) / (ior + 1.0f), 2.0f);
-    vec3 Ks = vec3(f0);
+
+    aiColor4D spec_color(1.f, 1.f, 1.f, 1.f);
+    mtl->Get(AI_MATKEY_COLOR_SPECULAR, spec_color);
+    float spec_factor = 1.0f;
+    mtl->Get(AI_MATKEY_SPECULAR_FACTOR, spec_factor);
+
+    vec3 Ks = glm::min(
+        vec3(f0) * vec3(spec_color.r, spec_color.g, spec_color.b) * spec_factor,
+        vec3(1.0f));
 
     float alpha = 2.0f / (roughness * roughness) - 2.0f;
     alpha = glm::max(alpha, 1.0f);
