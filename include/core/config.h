@@ -14,7 +14,8 @@ struct MeshEntry {
     std::string path;           // relative to kModelDir
     vec3 position{0.0f};
     float scale = 1.0f;
-    float yaw = 0.0f;          // degrees
+    float yaw   = 0.0f;        // degrees, rotation around Y
+    float pitch = 0.0f;        // degrees, rotation around X
 };
 
 struct SphereEntry {

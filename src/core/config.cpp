@@ -89,6 +89,7 @@ SceneConfig loadConfig(const std::string& path) {
                 entry.position = toVec3(meshTable->get("position"), entry.position);
                 entry.scale    = mesh["scale"].value_or(entry.scale);
                 entry.yaw      = mesh["yaw"].value_or(entry.yaw);
+                entry.pitch    = mesh["pitch"].value_or(entry.pitch);
                 if (!entry.path.empty())
                     cfg.meshes.push_back(std::move(entry));
             }
@@ -215,7 +216,8 @@ void buildScene(const SceneConfig& cfg, Scene& scene) {
     for (const auto& entry : cfg.meshes) {
         mat4 model_tr = translate(entry.position)
             * scale(vec3(entry.scale))
-            * toMat4(angleAxis(entry.yaw * RADIANS, vec3(0, 1, 0)));
+            * toMat4(angleAxis(entry.yaw   * RADIANS, vec3(0, 1, 0)))
+            * toMat4(angleAxis(entry.pitch * RADIANS, vec3(1, 0, 0)));
 
         printf("Loading mesh: %s\n", entry.path.c_str());
         loadAssimpFile(entry.path, model_tr, scene, /*use_mesh_materials=*/true);
