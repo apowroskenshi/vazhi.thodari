@@ -24,7 +24,8 @@ Color Renderer::tracePath(const Ray& initial_ray) const {
 
     if (P.t >= INF) {
         if (m_scene.m_useIbl && m_scene.m_activeEnvMap) {
-            return m_scene.m_iblIntensity * m_scene.m_activeEnvMap->lookup(initial_ray.direction);
+            //return m_scene.m_iblIntensity * m_scene.m_activeEnvMap->lookup(initial_ray.direction);
+            return m_scene.m_activeEnvMap->lookup(initial_ray.direction);
         }
         return C;
     }
@@ -66,7 +67,7 @@ Color Renderer::tracePath(const Ray& initial_ray) const {
             L.normal = ls.normal;
             L.shape = reinterpret_cast<const Shape*>(ls.tri);
 
-            float p = m_scene.m_areaLight.pdf() / geometryFactor(P, L);
+            float p = m_scene.m_areaLight.pdf(P.position, L.position, L.normal);
             vec3 in_dir = normalize(L.position - P.position);
             float p_brdf = brdf::pdfBrdf(P.normal, in_dir, out_dir, *mat);
             float weight = (p * p) / (p * p + p_brdf * p_brdf);
@@ -156,7 +157,7 @@ Color Renderer::tracePath(const Ray& initial_ray) const {
         // Implicit light connection
         if (next_hit.shape->mat->isEmissive()) {
             float p_brdf = brdf::pdfBrdf(N, in_dir, out_dir, *mat) * RR;
-            float p_light = m_scene.m_areaLight.pdf() / geometryFactor(P, next_hit);
+            float p_light = m_scene.m_areaLight.pdf(P.position, next_hit.position, next_hit.normal);
             float weight = (p_brdf * p_brdf) / (p_brdf * p_brdf + p_light * p_light);
 
             vec3 light_emission = next_hit.shape->mat->Kd;

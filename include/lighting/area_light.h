@@ -23,7 +23,8 @@ public:
     void build(); // Build CDF after all triangles added
 
     Sample sample(float e1, float e2, float e3) const;
-    float pdf() const;
+    float pdf() const;  // area PDF (1/total_area)
+    float pdf(const vec3& shading_pos, const vec3& light_pos, const vec3& light_normal) const;  // solid angle PDF
     bool empty() const { return m_triangles.empty(); }
     size_t triangleCount() const { return m_triangles.size(); }
     float totalArea() const { return m_totalArea; }

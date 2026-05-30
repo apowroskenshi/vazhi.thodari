@@ -54,4 +54,18 @@ float AreaLight::pdf() const {
     return 1.0f / m_totalArea;
 }
 
+float AreaLight::pdf(const vec3& shading_pos, const vec3& light_pos, const vec3& light_normal) const {
+    if (m_totalArea <= 0.0f) return 0.0f;
+    
+    vec3 D = shading_pos - light_pos;
+    
+    float r2 = dot(D, D);
+    if (r2 < 1e-8f) return 0.0f;
+    
+    float cos_light = std::abs(dot(light_normal, D)) / std::sqrt(r2);
+    if (cos_light < 1e-6f) return 0.0f;
+    
+    return (1.0f / m_totalArea) * r2 / cos_light;
+}
+
 } // namespace vt

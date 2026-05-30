@@ -39,7 +39,7 @@ inline std::pair<vec3, vec3> sampleSphere(const vec3& center, float radius) {
     return {P, N};
 }
 
-// Geometry factor between two intersection points.
+// Geometry factor between two intersection points (both cosines, for bidirectional use).
 inline float geometryFactor(const Intersection& A, const Intersection& B) {
     vec3 D = A.position - B.position;
     float num = dot(A.normal, D) * dot(B.normal, D);
