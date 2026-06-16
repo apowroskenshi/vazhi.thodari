@@ -8,7 +8,7 @@ namespace vt {
 // Triangle with per-vertex normals, UVs, and tangents.
 // Supports smooth shading, texture lookups, alpha testing, and normal mapping.
 class MeshTriangle : public Shape {
-    static constexpr float EPS = 1e-7f;
+    static constexpr float EPS = 1e-8f;
 
 public:
     vec3 v0, v1, v2;        // Positions
