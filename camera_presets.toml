@@ -1,0 +1,357 @@
+# ════════════════════════════════════════════════════════════════
+# Camera presets (converted from camera.txt)
+#
+# Each block below is a drop-in replacement for the [camera],
+# [camera.position], [ibl] and [area_light] sections in config.toml.
+# Uncomment exactly one block and paste it over those sections.
+#
+# Source column order:
+#   x  y  z  ry  yaw  pitch  map_index  ibl_rotation  ibl_intensity  emit_scale
+#
+# IBL map_index reference:
+#   0 = Cloud Noon            (kloofendal_48d_partly_cloudy_puresky)
+#   1 = Afternoon             (noon_grass)
+#   2 = Night                 (dikhololo_night)
+#   3 = Interior - Morning    (umhlanga_sunrise)
+#   4 = Interior - Night      (golden_bay)
+# ════════════════════════════════════════════════════════════════
+
+
+# ─── Default ────────────────────────────────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -2.0
+# pitch = 10.0
+# [camera.position]
+# x = 13.5
+# y = 2.0
+# z = 12.0
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── Sponza ─────────────────────────────────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = 91.5
+# pitch = 13.5
+# [camera.position]
+# x = 8.0
+# y = 2.0
+# z = 0.0
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = 60.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Courtyard — Full View ───────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -2.0
+# pitch = 10.0
+# [camera.position]
+# x = 13.5
+# y = 2.0
+# z = 12.0
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Courtyard — Angled View (a) ─────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -45.0
+# pitch = 10.0
+# [camera.position]
+# x = 8.5
+# y = 2.0
+# z = 7.0
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Courtyard — Angled View (b) ─────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -70.0
+# pitch = 5.5
+# [camera.position]
+# x = 6.5
+# y = 2.0
+# z = 6.5
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Courtyard — Arches Night ────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = 75.0
+# pitch = -3.0
+# [camera.position]
+# x = 26.0
+# y = 2.5
+# z = -0.8
+# [ibl]
+# map_index = 2        # Night
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 10.0
+
+
+# ─── San Miguel Courtyard — Angled View, Long Shot ──────────────
+# [camera]
+# ry = 0.8
+# yaw = 115.0
+# pitch = 5.0
+# [camera.position]
+# x = 24.5
+# y = 2.0
+# z = 0.8
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Courtyard — Filtered Shadows, Near Fountain ─────
+# [camera]
+# ry = 0.8
+# yaw = 120.0
+# pitch = 0.0
+# [camera.position]
+# x = 15.5
+# y = 2.0
+# z = 5.0
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = 80.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Stairs ──────────────────────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = 0.0
+# pitch = -25.0
+# [camera.position]
+# x = 25.0
+# y = 5.5
+# z = 13.0
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = 180.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Stairs — Night ──────────────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = 0.0
+# pitch = -10.0
+# [camera.position]
+# x = 25.0
+# y = 5.5
+# z = 13.0
+# [ibl]
+# map_index = 2        # Night
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 10.0
+
+
+# ─── San Miguel Walkway — Right Balcony ─────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = 90.0
+# pitch = 0.0
+# [camera.position]
+# x = 24.5
+# y = 7.5
+# z = -1.5
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = -80.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Walkway — Left Balcony ──────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -70.0
+# pitch = -25.0
+# [camera.position]
+# x = 6.5
+# y = 8.0
+# z = 3.0
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── San Miguel Walkway — Night (a) ─────────────────────────────
+# [camera]
+# ry = 0.8
+# yaw = -90.0
+# pitch = 0.0
+# [camera.position]
+# x = 6.5
+# y = 7.5
+# z = -1.5
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 10.0
+
+
+# ─── San Miguel Walkway — Left Balcony, Night ───────────────────
+# [camera]
+# ry = 0.8
+# yaw = -70.0
+# pitch = -25.0
+# [camera.position]
+# x = 6.5
+# y = 8.0
+# z = 3.0
+# [ibl]
+# map_index = 1        # Afternoon
+# rotation = 0.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 10.0
+
+
+# ─── Lumberyard Bistro Exterior — Kloofendal (a) ────────────────
+# [camera]
+# ry = 0.8
+# yaw = -85.0
+# pitch = 20.0
+# [camera.position]
+# x = -2.5
+# y = 0.45
+# z = 0.2
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = -60.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── Lumberyard Bistro Exterior — Kloofendal (b) ────────────────
+# [camera]
+# ry = 0.8
+# yaw = -75.0
+# pitch = 10.0
+# [camera.position]
+# x = -1.7
+# y = 0.35
+# z = 0.35
+# [ibl]
+# map_index = 0        # Cloud Noon
+# rotation = -60.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── Lumberyard Bistro Interior — Umhlanga Sunrise (a) ──────────
+# [camera]
+# ry = 1.0
+# yaw = -96.7
+# pitch = -6.2
+# [camera.position]
+# x = -0.062
+# y = 0.537
+# z = -0.327
+# [ibl]
+# map_index = 3        # Interior - Morning (umhlanga_sunrise)
+# rotation = -55.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── Lumberyard Bistro Interior — Umhlanga Sunrise (b) ──────────
+# [camera]
+# ry = 0.8
+# yaw = -143.3
+# pitch = 0.0
+# [camera.position]
+# x = 0.007
+# y = 0.444
+# z = -0.793
+# [ibl]
+# map_index = 3        # Interior - Morning (umhlanga_sunrise)
+# rotation = -55.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0
+
+
+# ─── Lumberyard Bistro Interior — Umhlanga Sunrise (c) ──────────
+# [camera]
+# ry = 0.8
+# yaw = 87.0
+# pitch = -6.6
+# [camera.position]
+# x = 2.197
+# y = 0.551
+# z = -0.027
+# [ibl]
+# map_index = 3        # Interior - Morning (umhlanga_sunrise)
+# rotation = -100.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 5.0
+
+
+# ─── Lumberyard Bistro Interior — Golden Bay ────────────────────
+# [camera]
+# ry = 1.0
+# yaw = -96.7
+# pitch = -6.2
+# [camera.position]
+# x = -0.062
+# y = 0.537
+# z = -0.327
+# [ibl]
+# map_index = 4        # Interior - Night (golden_bay)
+# rotation = -40.0
+# intensity = 1.0
+# [area_light]
+# emit_scale = 1.0

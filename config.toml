@@ -72,15 +72,15 @@ emission = [1.0, 1.0, 1.0]
 #path = "Sponza/curtains/curtains.gltf"
 #position = [0.0, 0.0, 0.0]
 
-[[mesh]]
-path = "Bistro/Exterior/Exterior.gltf"
-position = [0.0, 0.0, 0.0]
-scale = 0.016
-
 #[[mesh]]
-#path = "San_Miguel/San_Miguel.gltf"
+#path = "Bistro/Exterior/Exterior.gltf"
 #position = [0.0, 0.0, 0.0]
-#scale = 1.0
+#scale = 0.016
+
+[[mesh]]
+path = "San_Miguel/San_Miguel.gltf"
+position = [0.0, 0.0, 0.0]
+scale = 1.0
 # yaw = 0.0                   # optional, degrees
 
 # Primitives (reference named materials)
@@ -98,24 +98,24 @@ scale = 0.016
 
 [camera]
 ry = 0.8
-yaw = 65.0
-pitch = -8.0
+yaw = 90.0
+pitch = 0.0
 
 [camera.position]
-x = 0.22
-y = 0.064
-z = 0.125
+x = 24.5
+y = 7.5
+z = -1.5
 
 [ibl]
-map_index = 0
-rotation = -100.0       # degrees
+map_index = 0        
+rotation = -80.0
 intensity = 1.0
 
 [area_light]
 emit_scale = 1.0
 
 [render]
-max_passes = 2048
+max_passes = 250
 write_interval = 5
 noise_threshold = 0.0005
 russian_roulette = 0.8
