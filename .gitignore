@@ -2,6 +2,8 @@
 x64/
 Debug/
 Release/
+RelWithDebInfo/
+MinSizeRel/
 *.obj
 *.pdb
 *.ilk
@@ -12,6 +14,7 @@ Release/
 *.iobj
 *.ipdb
 *.log
+bin/
 
 # Visual Studio
 .vs/
@@ -37,8 +40,18 @@ Desktop.ini
 # CMake build artifacts
 build/
 CMakeFiles/
+CMakeScripts/
 cmake_install.cmake
 CMakeCache.txt
+*.dir/
+
+# CMake-generated IDE projects (run `cmake -B . -G Xcode` or
+# `cmake -B . -G "Visual Studio 17 2022"` to regenerate)
+*.xcodeproj/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.slnx
 
 # Scene cache files
 *.cache
@@ -50,6 +63,7 @@ assets/hdri/
 # Render output
 outputs/
 movie_frames/
+renders/
 
 # Intel Open Image Denoise binaries
 utils/oidn/
